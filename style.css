@@ -7,18 +7,23 @@ body {
   margin: 0;
 }
 /* ----------------------header---------------------- */
+header {
+  overflow: hidden;
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #0f2027;
-  position: fixed;
+  position: sticky;
   width: 100%;
   height: 75px;
   top: 0;
   left: 0;
-  box-shadow: 1px 1px 10px #ef7118b4;
+  border-bottom: solid 1px #ef7318;
   z-index: 1000;
+  overflow: hidden;
 }
 
 .main-header a {
@@ -27,9 +32,14 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 350px) {
+  .main-header a {
+    font-size: 0.9rem;
+  }
+}
 .logo {
   color: #ef7318 !important;
-  margin-left: 10%;
+  margin-left: 15px;
   font-weight: thin;
   font-style: normal;
   font-size: 1.6rem;
@@ -38,7 +48,7 @@ body {
 #navbar {
   text-transform: uppercase;
   font-size: 1.3rem;
-  margin-right: 10%;
+  padding-right: 10%;
   z-index: 100;
 }
 
@@ -76,6 +86,12 @@ body {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 350px) {
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+}
+
 .description-title {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
@@ -99,9 +115,28 @@ body {
   margin: auto;
   gap: 3rem;
 }
+
+@media (max-width: 800px) {
+  .about {
+    padding: auto;
+  }
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+  .profile-img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: auto;
+  }
+}
+
 .profile-img {
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -173,6 +208,21 @@ body {
   font-size: 3.5rem;
   margin: 0;
   color: white;
+}
+
+@media (max-width: 350px) {
+  .contact-wrap h1 {
+    font-size: 2rem;
+  }
+
+  .social-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-container a {
+    margin-left: 0 !important;
+  }
 }
 
 .contact-wrap span {
